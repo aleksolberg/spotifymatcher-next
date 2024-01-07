@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@spotify/web-api-ts-sdk':
+    specifier: ^1.1.2
+    version: 1.1.2
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -284,6 +287,10 @@ packages:
   /@rushstack/eslint-patch@1.6.1:
     resolution: {integrity: sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==}
     dev: true
+
+  /@spotify/web-api-ts-sdk@1.1.2:
+    resolution: {integrity: sha512-WxmaKUGZH2xtoVDZuy6PXbrAIiEux9pL1IDaDm6iRI25nT8be6huCNpNtYe0MBtq+rejbJqjg9JI2MVlfEMyUQ==}
+    dev: false
 
   /@swc/helpers@0.5.2:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
