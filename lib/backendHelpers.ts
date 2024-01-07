@@ -17,7 +17,7 @@ const headers = {
 };
 
 export const saveProfileData = async (profileData: ProfileData) => {
-  return await fetch(backendUrl + "/users", {
+  return await fetch(backendUrl + "/user", {
     method: "POST",
     headers,
     body: JSON.stringify(profileData),
@@ -28,7 +28,7 @@ export const saveTopArtists = async (
   userId: string,
   topArtists: TopArtists
 ) => {
-  return await fetch(`${backendUrl}/users/${userId}/artists`, {
+  return await fetch(`${backendUrl}/user/${userId}/artist`, {
     method: "POST",
     headers,
     body: JSON.stringify(topArtists),
