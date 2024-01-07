@@ -1,4 +1,5 @@
-import { clientId, redirectUri } from "./const";
+const clientId = process.env.CLIENT_ID
+const redirectUri = `${process.env.VERCEL_URL}/callback`
 
 async function generateCodeChallenge(codeVerifier: string) {
   const data = new TextEncoder().encode(codeVerifier);
@@ -19,7 +20,7 @@ export async function redirectToAuthCodeFlow(
   localStorage.setItem("verifier", verifier);
 
   const params = new URLSearchParams();
-  params.append("client_id", clientId);
+  params.append("client_id", clientId!);
   params.append("response_type", "code");
   params.append("redirect_uri", redirectUri);
   params.append("scope", "user-read-private user-read-email user-top-read");
@@ -47,7 +48,7 @@ export async function getAccessToken(code: string): Promise<string> {
   const verifier = localStorage.getItem("verifier");
 
   const params = new URLSearchParams();
-  params.append("client_id", clientId);
+  params.append("client_id", clientId!);
   params.append("grant_type", "authorization_code");
   params.append("code", code);
   params.append("redirect_uri", redirectUri);

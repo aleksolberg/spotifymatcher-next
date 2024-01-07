@@ -10,7 +10,6 @@ import {
   fetchTopArtists,
   getAccessToken,
 } from "@/lib/spotifyHelpers";
-import { frontendBaseUrl } from "@/lib/const";
 import { useSearchParams } from "next/navigation";
 
 function Callback() {
@@ -74,7 +73,7 @@ function Callback() {
     }
   };
 
-  const shareUrl = frontendBaseUrl + "?compareWithUserName=" + profile?.id;
+  const shareUrl = process.env.VERCEL_URL + "?compareWithUserName=" + profile?.id;
 
   return (
     <>

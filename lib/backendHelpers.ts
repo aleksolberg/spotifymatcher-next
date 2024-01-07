@@ -1,5 +1,3 @@
-import { backendUrl } from "./const";
-
 type ProfileData = {
   spotifyUserId: string;
   name: string;
@@ -11,6 +9,8 @@ type ProfileData = {
 type TopArtists = {
   name: string;
 }[];
+
+const backendUrl = `${process.env.VERCEL_URL}/api`
 
 const headers = {
   "Content-Type": "application/json",
