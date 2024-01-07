@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 import {
   compareArtists,
@@ -10,12 +11,12 @@ import {
   getAccessToken,
 } from "@/lib/spotifyHelpers";
 import { frontendBaseUrl } from "@/lib/const";
+import { useSearchParams } from "next/navigation";
 
 function Callback() {
-  const code = new URLSearchParams(window.location.search).get("code");
-  const compareWithUserName = new URLSearchParams(window.location.search).get(
-    "state"
-  );
+  const searchParams = useSearchParams();
+  const code = searchParams.get('code');
+  const compareWithUserName = searchParams.get('state');
 
   const [error, setError] = useState<string | null>(null);
   const [profile, setProfile] = useState<{
