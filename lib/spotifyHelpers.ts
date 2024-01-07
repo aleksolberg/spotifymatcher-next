@@ -1,5 +1,5 @@
 const clientId = process.env.CLIENT_ID
-const redirectUri = `${process.env.BASE_URL}/callback`
+const redirectUri = `${process.env.NEXT_PUBLIC_BASE_URL}/callback`
 
 async function generateCodeChallenge(codeVerifier: string) {
   const data = new TextEncoder().encode(codeVerifier);

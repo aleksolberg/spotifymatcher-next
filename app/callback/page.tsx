@@ -73,7 +73,7 @@ function Callback() {
     }
   };
 
-  const shareUrl = process.env.BASE_URL + "?compareWithUserName=" + profile?.id;
+  const shareUrl = process.env.NEXT_PUBLIC_BASE_URL + "?compareWithUserName=" + profile?.id;
 
   return (
     <>
