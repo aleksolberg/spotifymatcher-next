@@ -73,7 +73,7 @@ function Callback() {
     }
   };
 
-  const shareUrl = process.env.VERCEL_URL + "?compareWithUserName=" + profile?.id;
+  const shareUrl = process.env.NEXT_PUBLIC_VERCEL_URL + "?compareWithUserName=" + profile?.id;
 
   return (
     <>

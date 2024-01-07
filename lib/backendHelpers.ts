@@ -10,7 +10,7 @@ type TopArtists = {
   name: string;
 }[];
 
-const backendUrl = `${process.env.VERCEL_URL}/api`
+const backendUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
 
 const headers = {
   "Content-Type": "application/json",
